@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Forms Forest CI/CD Suite" parallel="methods" thread-count="4">
+    
+    <!-- Forms Forest Smoke Tests for CI/CD -->
+    <test name="Forms Forest Smoke CI" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestSmokeTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="smoke"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest Regression Tests for CI/CD -->
+    <test name="Forms Forest Regression CI" parallel="methods" thread-count="3">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestRegressionTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest All Categories for CI/CD -->
+    <test name="Forms Forest All Categories CI" parallel="methods" thread-count="4">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestBasicTestRunner"/>
+            <class name="com.playbotlabs.runners.FormsForestAdvancedTestRunner"/>
+            <class name="com.playbotlabs.runners.FormsForestFileUploadTestRunner"/>
+            <class name="com.playbotlabs.runners.FormsForestMultiStepTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+            </run>
+        </groups>
+    </test>
+    
+</suite>

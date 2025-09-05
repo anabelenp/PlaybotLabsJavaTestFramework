@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Forms Forest Categorized Test Suite" parallel="methods" thread-count="4">
+    
+    <!-- Forms Forest Basic Form Elements Tests -->
+    <test name="Basic Form Elements" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestBasicTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="basic-forms"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest Advanced Controls Tests -->
+    <test name="Advanced Controls" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestAdvancedTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="advanced-controls"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest File Upload Tests -->
+    <test name="File Upload" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestFileUploadTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="file-upload"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest Multi-Step Form Tests -->
+    <test name="Multi-Step Form" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestMultiStepTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="multi-step"/>
+            </run>
+        </groups>
+    </test>
+    
+</suite>

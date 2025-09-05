@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Forms Forest Regression Test Suite" parallel="methods" thread-count="3">
+    
+    <!-- Forms Forest Regression Tests Only -->
+    <test name="Forms Forest Regression Tests">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestRegressionTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+    </test>
+    
+</suite>

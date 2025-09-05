@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PlayBotLabs Automation Suite" parallel="methods" thread-count="3">
+    
+    <!-- All Tests - Default execution -->
+    <test name="All Cucumber Tests">
+        <classes>
+            <class name="com.playbotlabs.runners.TestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Forms Forest Smoke Tests with parallel execution -->
+    <test name="Forms Forest Smoke Tests" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestSmokeTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="smoke"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest Regression Tests with parallel execution -->
+    <test name="Forms Forest Regression Tests" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestRegressionTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest All Tests with parallel execution -->
+    <test name="Forms Forest All Tests" parallel="methods" thread-count="3">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest Basic Form Elements Tests -->
+    <test name="Forms Forest Basic Form Elements" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestBasicTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="basic-forms"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest Advanced Controls Tests -->
+    <test name="Forms Forest Advanced Controls" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestAdvancedTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="advanced-controls"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest File Upload Tests -->
+    <test name="Forms Forest File Upload" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestFileUploadTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="file-upload"/>
+            </run>
+        </groups>
+    </test>
+    
+    <!-- Forms Forest Multi-Step Form Tests -->
+    <test name="Forms Forest Multi-Step Form" parallel="methods" thread-count="2">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestMultiStepTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="multi-step"/>
+            </run>
+        </groups>
+    </test>
+    
+</suite>

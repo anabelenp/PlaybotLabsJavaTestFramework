@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Forms Forest Basic Form Elements Test Suite" parallel="methods" thread-count="2">
+    
+    <!-- Forms Forest Basic Form Elements Tests Only -->
+    <test name="Forms Forest Basic Form Elements Tests">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestBasicTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="basic-forms"/>
+            </run>
+        </groups>
+    </test>
+    
+</suite>

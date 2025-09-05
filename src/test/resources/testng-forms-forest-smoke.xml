@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Forms Forest Smoke Test Suite" parallel="methods" thread-count="2">
+    
+    <!-- Forms Forest Smoke Tests Only -->
+    <test name="Forms Forest Smoke Tests">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestSmokeTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="smoke"/>
+            </run>
+        </groups>
+    </test>
+    
+</suite>

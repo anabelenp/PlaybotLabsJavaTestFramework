@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Forms Forest File Upload Test Suite" parallel="methods" thread-count="2">
+    
+    <!-- Forms Forest File Upload Tests Only -->
+    <test name="Forms Forest File Upload Tests">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestFileUploadTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+                <include name="file-upload"/>
+            </run>
+        </groups>
+    </test>
+    
+</suite>

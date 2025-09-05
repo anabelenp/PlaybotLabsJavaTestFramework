@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Forms Forest Test Suite" parallel="methods" thread-count="3">
+    
+    <!-- Forms Forest All Tests -->
+    <test name="Forms Forest Complete Test Suite">
+        <classes>
+            <class name="com.playbotlabs.runners.FormsForestTestRunner"/>
+        </classes>
+        <groups>
+            <run>
+                <include name="forms-forest"/>
+            </run>
+        </groups>
+    </test>
+    
+</suite>
