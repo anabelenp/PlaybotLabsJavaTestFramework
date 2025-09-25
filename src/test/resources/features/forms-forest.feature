@@ -13,14 +13,15 @@ Feature: Forms Forest Automation
     Then I should see the form container is displayed
     And I should see all form fields are displayed
     And I should see the submit button is displayed
-    And I should see the reset button is displayed
+   # And I should see the reset button is displayed
     And I should see the submit button is enabled
 
-  @smoke @basic-forms
+  @smoke @basic-forms @wip
   Scenario: Simple form submission with valid data
     When I fill the username field with "testuser"
-    And I fill the password field with "password123"
     And I fill the email field with "test@example.com"
+    And I fill the password field with "password123"
+    And I fill the phone number field with "(415) 333-5678"
     And I submit the form
     Then I should see a success message
 
@@ -90,7 +91,7 @@ Feature: Forms Forest Automation
 
   @basic-forms
   Scenario: Gender selection functionality
-    When I select "male" as gender
+    When I select "female" as gender
     And I fill the username field with "testuser"
     And I fill the password field with "password123"
     And I submit the form

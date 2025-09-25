@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Page Object class for Forms Forest page
@@ -16,7 +17,7 @@ public class FormsForestPage extends BasePage {
     @FindBy(css = "form")
     private WebElement mainForm;
 
-    @FindBy(css = ".form-container")
+    @FindBy(css = ".card")
     private WebElement formContainer;
 
     // Common form input elements
@@ -29,14 +30,14 @@ public class FormsForestPage extends BasePage {
     @FindBy(name = "email")
     private WebElement emailField;
 
+    @FindBy(name = "phone")
+    private WebElement phoneNumberField;
+
     @FindBy(name = "firstName")
     private WebElement firstNameField;
 
     @FindBy(name = "lastName")
     private WebElement lastNameField;
-
-    @FindBy(name = "phoneNumber")
-    private WebElement phoneNumberField;
 
     // Text area elements
     @FindBy(name = "comments")
@@ -526,7 +527,7 @@ public class FormsForestPage extends BasePage {
     public List<String> getValidationErrors() {
         return validationErrors.stream()
                 .map(WebElement::getText)
-                .toList();
+                .collect(Collectors.toList());
     }
 
     /**
@@ -690,7 +691,7 @@ public class FormsForestPage extends BasePage {
         return interestsCheckboxes.stream()
                 .filter(WebElement::isSelected)
                 .map(checkbox -> checkbox.getAttribute("value"))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     /**
@@ -701,7 +702,7 @@ public class FormsForestPage extends BasePage {
         return skillsCheckboxes.stream()
                 .filter(WebElement::isSelected)
                 .map(checkbox -> checkbox.getAttribute("value"))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     /**

@@ -39,6 +39,7 @@ buildNumber.properties
 /test-output/
 /allure-results/
 /allure-report/
+/.allure/
 /cucumber-reports/
 /surefire-reports/
 /failsafe-reports/
@@ -48,6 +49,7 @@ buildNumber.properties
 target/**/*.html
 target/**/*.xml
 target/**/*.json
+/extra
 
 # IDE Files
 .idea/
@@ -58,6 +60,7 @@ target/**/*.json
 .settings/
 .project
 .classpath
+.kiro/
 
 # OS Files
 .DS_Store
@@ -95,3 +98,9 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Task implementation summaries and requirements (development artifacts)
+docs/TASK_*_IMPLEMENTATION_SUMMARY.md
+docs/requirements.txt
+TASK_*_IMPLEMENTATION_SUMMARY.md
+requirements.txt
